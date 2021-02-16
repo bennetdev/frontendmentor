@@ -20,7 +20,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 180px 200px 180px 180px;
+    margin: 205px 200px 180px 180px;
 }
 .intro{
     font-size: 16px;
@@ -73,7 +73,7 @@ body{
 }
 .logo{
     position: absolute;
-    top: 50px;
+    top: 60px;
     margin-left: 180px;
 }
 #error{
