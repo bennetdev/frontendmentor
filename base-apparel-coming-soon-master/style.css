@@ -1,0 +1,118 @@
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+}
+.card{
+    display: flex;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    font-weight: 300;
+    letter-spacing: 10px;
+    font-size: 50px;
+    margin: 0 0 5px 0;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 180px 200px 180px 180px;
+}
+.intro{
+    font-size: 16px;
+    line-height: 25px;
+}
+.subtitle{
+    font-weight: 600;
+    font-size: 50px;
+    letter-spacing: 10px;
+    margin: 0 0 5px 0;
+}
+.light{
+    color: hsl(0, 36%, 70%);
+}
+.email{
+    height: 45px;
+    width: 100%;
+    border-radius: 160px;
+    border: 1px solid hsl(0, 36%, 70%);
+    padding-left: 20px;
+}
+.email::placeholder{
+    color: hsl(0, 36%, 70%);
+}
+.email-form{
+    display: flex;
+    align-items: center;
+}
+.submit-email{
+    height: 49px;
+    margin-left: -80px;
+    width: 90px;
+    border-radius: 160px;
+    border: none;
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    box-shadow: 2px 4px 6px hsl(0deg 80% 86%);
+    cursor: pointer;
+}
+.email:focus{
+    outline: none;
+}
+.submit-email:active{
+    background-image: linear-gradient(135deg, hsl(0, 100%, 98%), hsl(0, 80%, 86%));
+    box-shadow: 2px 4px 6px hsl(0deg 80% 86%);
+}
+.submit-email:focus{
+    outline: none;
+}
+.logo{
+    position: absolute;
+    top: 50px;
+    margin-left: 180px;
+}
+#error{
+    color: hsl(0, 93%, 68%);
+    font-size: 12px;
+    margin-left: 20px;
+    visibility: hidden;
+}
+.error{
+   border:  1px solid hsl(0, 93%, 68%);
+}
+#error-icon{
+    padding-right: 100px;
+    margin-left: -100px;
+    height: 24px;
+    width: 24px;
+    visibility: hidden;
+}
+.image{
+    height: 100vh;
+}
+@media (max-width: 1000px){
+    .card{
+        flex-direction: column;
+    }
+    .image{
+        order: 1;
+        height: 100%;
+        content: url(images/hero-mobile.jpg);
+        margin-top: 80px;
+        object-fit: contain;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .text{
+        margin: 20px;
+        order: 2;
+        text-align: center;
+    }
+    .logo{
+        top: 20px;
+        margin-left: 20px;
+    }
+}

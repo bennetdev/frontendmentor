@@ -1,0 +1,54 @@
+body{
+    background-repeat: no-repeat;
+    background-image: url("images/bg-pattern.svg");
+    font-family: 'Manrope', sans-serif;
+    z-index: 1;
+}
+.title{
+    margin-top: 100px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: hsl(227, 35%, 25%);
+}
+.subtitle{
+    margin-top: 0;
+    font-weight: 600;
+    color: hsl(225, 20%, 60%);
+}
+.center{
+    text-align: center;
+}
+.bg-circle{
+    position: absolute;
+    z-index: -1;
+}
+.card{
+    height: 400px;
+    width: 500px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+.pageviews{
+    margin-bottom: 0;
+}
+.price{
+    margin-left: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+.pageview-wrapper{
+    display: flex;
+    align-items: center;
+}
