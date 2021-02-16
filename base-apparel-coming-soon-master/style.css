@@ -93,6 +93,9 @@ body{
 .image{
     height: 100vh;
 }
+.text-side{
+    background-image: url("images/bg-pattern-desktop.svg");
+}
 @media (max-width: 1000px){
     .card{
         flex-direction: column;
@@ -106,9 +109,11 @@ body{
         width: 100%;
         margin-bottom: 30px;
     }
+    .text-side{
+        order: 2;
+    }
     .text{
         margin: 20px;
-        order: 2;
         text-align: center;
     }
     .logo{
