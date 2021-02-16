@@ -58,7 +58,7 @@ body{
     border-radius: 160px;
     border: none;
     background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
-    box-shadow: 2px 4px 6px hsl(0deg 80% 86%);
+    box-shadow: 2px 4px 6px hsl(0, 80%, 86%);
     cursor: pointer;
 }
 .email:focus{
@@ -66,7 +66,7 @@ body{
 }
 .submit-email:active{
     background-image: linear-gradient(135deg, hsl(0, 100%, 98%), hsl(0, 80%, 86%));
-    box-shadow: 2px 4px 6px hsl(0deg 80% 86%);
+    box-shadow: 2px 4px 6px hsl(0, 80% ,86%);
 }
 .submit-email:focus{
     outline: none;
@@ -97,6 +97,7 @@ body{
 }
 .text-side{
     background-image: url("images/bg-pattern-desktop.svg");
+    background-size: cover;
 }
 @media (max-width: 1000px){
     .card{
@@ -113,6 +114,7 @@ body{
     }
     .text-side{
         order: 2;
+        background-size: auto;
     }
     .text{
         margin: 20px;
