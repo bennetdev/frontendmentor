@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+</head>
+<body>
+  <div class="center">
+    <div class="container">
+
+      <div class="img">
+        <img src="images/illustration-box-desktop.svg" alt="" class="box">
+      </div>
+      <div class="text">
+        <div>
+          <div class="title">
+            <h1>FAQ</h1>
+          </div>
+          <div class="faq">
+            <h4 class="question">How many team members can I invite?<img class="arrow" src="images/icon-arrow-down.svg" alt=""></h4>
+            <p class="answer">You can invite up to 2 additional users on the Free plan. There is no limit on
+              team members for the Premium plan.</p>
+          </div>
+          <div class="faq">
+            <h4 class="question">What is the maximum file upload size?<img class="arrow" src="images/icon-arrow-down.svg" alt=""></h4>
+            <p class="answer">No more than 2GB. All files in your account must fit your allotted storage space.</p>
+          </div>
+          <div class="faq">
+            <h4 class="question">How do I reset my password?<img class="arrow" src="images/icon-arrow-down.svg" alt=""></h4>
+            <p class="answer">Click “Forgot password” from the login page or “Change password” from your profile page.
+              A reset link will be emailed to you.</p>
+          </div>
+          <div class="faq">
+            <h4 class="question">Can I cancel my subscription?<img class="arrow" src="images/icon-arrow-down.svg" alt=""></h4>
+            <p class="answer">Yes! Send us a message and we’ll process your request no questions asked.</p>
+          </div>
+          <div class="faq">
+            <h4 class="question">Do you provide additional support?<img class="arrow" src="images/icon-arrow-down.svg" alt=""></h4>
+            <p class="answer">Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+<script>
+  function clickFaq(e){
+    var is_active = e.target.classList.contains("active");
+    document.querySelectorAll(".faq").forEach(item => {
+      item.classList.remove("active")
+    })
+    if(!is_active){
+      e.target.classList.add("active");
+    }
+  }
+  function positionBox(){
+    var img = document.getElementsByClassName("img")[0].getBoundingClientRect();
+    var box = document.getElementsByClassName("box")[0];
+    var img_top = img.top;
+    var img_left = img.left;
+
+    box.style.top = (img_top + 197).toString() + "px"
+    box.style.left = (img_left - 129).toString() + "px"
+  }
+  positionBox();
+  window.addEventListener("resize", positionBox)
+
+  document.querySelectorAll(".faq").forEach(item => {
+    item.addEventListener("click", clickFaq)
+  })
+</script>
